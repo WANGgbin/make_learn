@@ -105,3 +105,8 @@ make 中还有一个称为模式规则(pattern rule)的语法. 跟静态模式�
             $(CC) -o $@ -c $^
     ```
     这里使用了自动变量,即使 foo.c 在其他目录, 自动变量跟随目录发现.
+## 库的搜寻路径
+当我们在 rule 中使用 -lname 的时候, 该文件会被 make 视为一个库. make 会优先在当前目录下寻找 libname.so,如果找不到,则在 vpath, VPATH 以及若干目录(/lib, /usr/lib, /usr/local/lib)搜寻.
+如果还找不到,则寻找 libname.a 文件.
+尽管,对于库文件,默认搜寻的就是 libname.so 和 libname.a 文件,不过,我们可以通过修改`.LIBPATTERNS`来自定义要寻找的文件. 该变量的默认值为: `lib%.so lib%.a`. 如果我们只想使用静态库的时候,则
+可以修改变量内容为`.LIBPATTERNS = lib%.a`
