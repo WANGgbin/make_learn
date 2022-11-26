@@ -3,12 +3,21 @@
 # 2. <跟我一起学习 Makefile> file:///home/wgb/Desktop/CSBooks/make/Makefile.pdf
 # 3. <> 
 #MAKEFLAGS := $(MAKEFLAGS) --just-print
-include sub_dir/Makefile
-main: main.o utils.o
-	gcc -o main main.o utils.o
 
-main.o: main.c
-	gcc -o main.o -c main.c
+print_path:
+	@echo $(var1)
+	@echo $(var2)
 
-print:
-	@echo $(.INCLUDE_DIRS)
+var := a:b:c
+foo := $(subst :,     ,$(var))
+
+var1 := abc 
+var2 :=			abc
+
+ifeq ($(var1), $(var2))
+$(info case assign, yes!)
+endif
+
+ifeq ($(var1) ,    $(var2) )
+$(info conditional directive, yes!)
+endif

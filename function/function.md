@@ -61,3 +61,12 @@ make 包括三类日志函数:
   - $(info text)
     不会终止函数运行.
 **注意这类函数并没有返回值,只是将 text 输出到标准输出**.
+- origin 函数
+  origin 函数用来判断某个变量是从哪儿来的. 因为 make 中的变量来源很多,我们经常需要确认某个变量的来源,才可以信任这个变量并基于此变量进行若干操作.
+  origin 函数的语法为: `$(origin varname)`. origin 函数的可能结果为:
+  - "undefined" 未定义
+  - "environment" 来源于环境变量
+  - "file" 文件中定义的变量
+  - "command line" 命令行中定义的变量
+  - "override" 文件中通过 override 定义的变量
+  - "automic" 自动变量
