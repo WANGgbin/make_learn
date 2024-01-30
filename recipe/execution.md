@@ -33,3 +33,5 @@
     默认情况下, make 会从 makefile 内部定义的 SHELL 变量(**该变量并不会继承自环境变量中的 SHELL**))获取 sh.如果没有定义该变量的话,默认是`/bin/sh`.这里有个问题,为什么不直接使用环境变量中的 SHELL 呢?
     这是因为,通常 shell 中的 SHELL 可能是用户自定义的,如果直接使用该 SHELL,可能会导致非预期的行为.
     当执行 recipe line 的时候,我们在 makefile 中指定的 SHELL 并不会传递到 sub_shell 的环境变量中,默认还是将当前环境变量中的 SHELL 传递给 sub_shell. 不过,我们可以在 Makefile 内部通过 export SHELL 的方式,将 Makefile 内部的 SHELL 传递到 sub_shell 的环境变量中. 不过, **在 sub_make 中, 使用哪个 sh, 还是通过 sub_makefile 内部定义的 SHELL 决定**.
+
+    just for test
