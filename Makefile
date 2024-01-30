@@ -21,3 +21,7 @@ endif
 ifeq ($(var1) ,    $(var2) )
 $(info conditional directive, yes!)
 endif
+
+# just for test
+
+# see what will happened.
