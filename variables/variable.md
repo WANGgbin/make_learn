@@ -137,3 +137,5 @@ make 在执行命令的时候,默认会将 make 环境变量中的变量以及 m
         @echo $(var) # echo " command line"
 ```
 通常变量赋值的时候,会将开始的空格删除,如果想要保留的话,可以考虑使用 "" 定义变量的值.
+
+something just for testing.
