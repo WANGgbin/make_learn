@@ -35,3 +35,4 @@
     当执行 recipe line 的时候,我们在 makefile 中指定的 SHELL 并不会传递到 sub_shell 的环境变量中,默认还是将当前环境变量中的 SHELL 传递给 sub_shell. 不过,我们可以在 Makefile 内部通过 export SHELL 的方式,将 Makefile 内部的 SHELL 传递到 sub_shell 的环境变量中. 不过, **在 sub_make 中, 使用哪个 sh, 还是通过 sub_makefile 内部定义的 SHELL 决定**.
 
     just for test
+    some new change
