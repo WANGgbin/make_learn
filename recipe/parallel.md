@@ -11,3 +11,5 @@
     当我们以 'make all --jobs=2' 运行 paraller.mk 的时候,就会看到同时有两个 sleep 进程.
 
     > 注意: 串行/并行的粒度是 recipe/rule 而不是 recipe line(command).
+
+    just for test
