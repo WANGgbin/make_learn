@@ -24,5 +24,5 @@ endif
 
 # just for test
 
-# see what will happened.
+# see what will happened. fix bug.
 # xxx
